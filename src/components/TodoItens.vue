@@ -1,16 +1,19 @@
 <script setup lang="js">
+import store from '../../store';
 import TodoItem from './TodoItem.vue';
 
 </script>
 
 <template>
     <div class="space-y-2">
+        <TodoItem 
+            v-for="todo in store.state.todos"
+            :key="todo.id"/>
+        <!-- <TodoItem />
         <TodoItem />
         <TodoItem />
         <TodoItem />
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
+        <TodoItem /> -->
 
         <!-- <div class="bg-gray-300 rounded-sm">
             <div class="flex items-center px-4 py-3 border-b border-gray-400 last:border-b-0">
