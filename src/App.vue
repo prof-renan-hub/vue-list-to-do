@@ -2,13 +2,15 @@
   <div class="w-full px-3 py-10 md:px-10">
     <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto">
 
-      <TodoSpinner />
+      <TodoSpinner v-if="loading"/>
 
-      <TodoFormAdd />
-
-      <TodoItens />
-
-      <TodoEmpty />
+      <template v-else>
+        <TodoFormAdd />
+  
+        <TodoItens />
+  
+        <TodoEmpty />
+      </template>
     </div>
   </div>
 </template>
@@ -25,6 +27,8 @@ import { useStore } from 'vuex';
 // const todos = ref([]);
 const store = useStore()
 
+const loading = ref(true);
+
 axios.get('http://localhost:3000/todos')
   .then(response => {
     store.commit('storeTodos', response.data);
@@ -33,6 +37,12 @@ axios.get('http://localhost:3000/todos')
   })
   .catch(error => {
     console.error('There was an error!', error);
+  })
+  .finally(() => {
+    setTimeout(() => {
+      loading.value = false;
+    }, 1500);
+    // loading.value = false;
   });
 
 
