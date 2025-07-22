@@ -1,5 +1,6 @@
 <script setup>
 import TodoFormAdd from './components/TodoFormAdd.vue';
+import TodoItens from './components/TodoItens.vue';
 import TodoSpinner from './components/TodoSpinner.vue';
 
 
@@ -13,7 +14,7 @@ import TodoSpinner from './components/TodoSpinner.vue';
 
       <TodoFormAdd />
 
-
+      <TodoItens />
 
       <!-- Todo items -->
 
