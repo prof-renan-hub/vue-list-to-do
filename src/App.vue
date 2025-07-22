@@ -36,7 +36,7 @@ axios.get('http://localhost:3000/todos')
     console.log(store.state.todos);
   })
   .catch(error => {
-    console.error('There was an error!', error);
+    console.error('Erro ao buscar lista de tarefas!', error);
   })
   .finally(() => {
     setTimeout(() => {
