@@ -1,19 +1,14 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import TodoSpinner from './components/TodoSpinner.vue';
+
+
 </script>
 
 <template>
   <!-- Content -->
   <div class="w-full px-3 py-10 md:px-10">
     <div class="w-full sm:w-1/2  mx-auto">
-
-      <!-- Todo spinner -->
-      <div class="text-center">
-        <img src="@/assets/img/spinner.svg" alt="" class="inline-block w-5 h-5">
-      </div>
-      <!--/ Todo spinner -->
-
+      <TodoSpinner />
       <!-- Todo form -->
       <form class="flex items-center px-4 bg-gray-900 h-15 rounded-sm border-l-2 border-green-400 mb-3">
         <input placeholder="Adicione um novo item ..." type="text" class="bg-gray-900 placeholder-gray-500 text-gray-500 
