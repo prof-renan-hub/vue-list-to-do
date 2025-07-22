@@ -1,52 +1,47 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
   <!-- Content -->
-  <div class="w-full px-3 py-10 md:px-10">
-    <div class="w-full sm:w-1/2  mx-auto">
+  <div class="">
+    <div class="">
 
       <!-- Todo spinner -->
-      <div class="text-center">
-        <img src="@/assets/img/spinner.svg" alt="" class="inline-block w-5 h-5">
+      <div class="">
+        <img src="@/assets/img/spinner.svg" alt="" class="">
       </div>
       <!--/ Todo spinner -->
 
       <!-- Todo form -->
-      <form class="flex items-center px-4 bg-gray-900 h-15 rounded-sm border-l-2 border-green-400 mb-3">
-        <input placeholder="Adicione um novo item ..." type="text" class="bg-gray-900 placeholder-gray-500 text-gray-500 
-          font-light focus:outline-none block w-full appearance-none leading-normal 
-          py-3 pr-3">
+      <form class="">
+        <input placeholder="Adicione um novo item ..." type="text" class="">
 
-        <button class="text-green-400 text-xs font-semibold focus:outline-none" type="submit">
+        <button class="" type="submit">
           ADICIONAR
         </button>
       </form>
       <!--/ Todo form -->
 
       <!-- Todo items -->
-      <div class="space-y-2">
-        <div class="bg-gray-300 rounded-sm">
-          <div class="flex items-center px-4 py-3 border-b border-gray-400 last:border-b-0">
-            <div class="flex items-center justify-center mr-2">
-              <button class="text-gray-400">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      <div class="">
+        <div class="">
+          <div class="">
+            <div class="">
+              <button class="">
+                <svg class="" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
               </button>
             </div>
 
-            <div class="w-full">
-              <input type="text" placeholder="Digite a sua tarefa" value="Estudar Vue 3" class="bg-gray-300 placeholder-gray-500 
-                text-gray-700 font-light focus:outline-none block w-full appearance-none leading-normal mr-3">
+            <div class="">
+              <input type="text" placeholder="Digite a sua tarefa" value="Estudar Vue 3" class="">
             </div>
 
-            <div class="ml-auto flex items-center justify-center">
-              <button class="focus:outline-none">
-                <svg class="ml-3 h-4 w-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            <div class="">
+              <button class="">
+                <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M19 7L18.1327 19.1425C18.0579 
                     20.1891 17.187 21 16.1378 21H7.86224C6.81296 21 5.94208 20.1891 5.86732 
@@ -58,25 +53,24 @@ import TheWelcome from './components/TheWelcome.vue'
           </div>
         </div>
 
-        <div class="bg-gray-300 rounded-sm">
-          <div class="flex items-center px-4 py-3 border-b border-gray-400 last:border-b-0">
-            <div class="flex items-center justify-center mr-2">
-              <button class="text-green-600">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        <div class="">
+          <div class="">
+            <div class="">
+              <button class="">
+                <svg class="" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
               </button>
             </div>
 
-            <div class="w-full">
-              <input type="text" placeholder="Digite a sua tarefa" value="Estudar Vue 3" readonly class="line-through bg-gray-300 
-                placeholder-gray-500 text-gray-700 font-light focus:outline-none block w-full appearance-none leading-normal mr-3">
+            <div class="">
+              <input type="text" placeholder="Digite a sua tarefa" value="Estudar Vue 3" readonly class="">
             </div>
 
-            <div class="ml-auto flex items-center justify-center">
-              <button class="focus:outline-none">
-                <svg class="ml-3 h-4 w-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            <div class="">
+              <button class="">
+                <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M19 7L18.1327 19.1425C18.0579 
                     20.1891 17.187 21 16.1378 21H7.86224C6.81296 21 5.94208 20.1891 5.86732 
@@ -91,7 +85,7 @@ import TheWelcome from './components/TheWelcome.vue'
       <!--/ Todo items -->
 
       <!-- Todo empty -->
-      <div class="text-center text-lg text-gray-500">
+      <div class="">
         Você ainda não tem nenhuma tarefa.
       </div>
       <!--/ Todo empty -->
