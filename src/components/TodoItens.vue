@@ -1,6 +1,9 @@
 <script setup lang="js">
-import store from '../../store';
+
+import { useStore } from 'vuex';
 import TodoItem from './TodoItem.vue';
+
+const store = useStore();
 
 </script>
 
