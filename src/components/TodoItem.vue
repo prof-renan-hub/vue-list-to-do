@@ -12,8 +12,10 @@
             </div>
 
             <div class="w-full">
-                <input type="text" placeholder="Digite a sua tarefa" :value="todo.title" class="bg-gray-300 placeholder-gray-500 
-                text-gray-700 font-light focus:outline-none block w-full appearance-none leading-normal mr-3" readonly>
+                <input 
+                @keyup.enter="updateTodo"
+                type="text" placeholder="Digite a sua tarefa" :value="todo.title" class="bg-gray-300 placeholder-gray-500 
+                text-gray-700 font-light focus:outline-none block w-full appearance-none leading-normal mr-3">
             </div>
 
             <div class="ml-auto flex items-center justify-center">
@@ -32,10 +34,31 @@
 </template>
 
 <script setup lang="js">
+import { useStore } from 'vuex';
+
+
 const props = defineProps({
     todo: {
         type: Object,
         default: () => ({})
     }
 });
+
+function updateTodo($event) {
+    console.log('Função updateTodo chamada, prevenindo reload. Título:', $event.target.value);
+    const newTitle = $event.target.value;
+
+    const store = useStore();
+
+    const payload = {
+        id: props.todo.id,
+        data: {
+            title: newTitle,
+            completed: props.todo.completed
+        }
+    };
+
+    store.dispatch('updateTodo', payload)
+
+}
 </script>

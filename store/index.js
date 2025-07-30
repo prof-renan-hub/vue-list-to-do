@@ -32,6 +32,10 @@ export default createStore({
                 commit('addTodo', response.data);
                 console.log('add todo-------------------', response.data);
             })
+        },
+        updateTodo(context, { id, data}) {
+            console.log('update todo-------------------', id, data);
+            return axios.post(`http://localhost:3000/todos/${id}`, data)            
         }
     },
     modules: {}
