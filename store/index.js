@@ -15,14 +15,12 @@ export default createStore({
             state.todos.push(payload);
         }
     },
-    getters: {},
     actions: {
         getTodos({ commit }) {
             return axios.get('http://localhost:3000/todos')
                 .then(response => {
                     commit('storeTodos', response.data);
                     // todos.value = response.data;
-                    console.log('buscou dados', response.data);
                 })
                 
         },
@@ -30,13 +28,17 @@ export default createStore({
             // commit('addTodo', data);
             return axios.post('http://localhost:3000/todos', data).then((response) => {
                 commit('addTodo', response.data);
-                console.log('add todo-------------------', response.data);
             })
         },
         updateTodo(context, { id, data}) {
-            console.log('update todo-------------------', id, data);
-            return axios.post(`http://localhost:3000/todos/${id}`, data)            
+            return axios.put(`http://localhost:3000/todos/${id}`, data).then(() => {
+                context.dispatch('getTodos'); // Atualiza a lista de tarefas após a atualização
+            })       
+        },
+        deleteTodo(context, id) {
+            return axios.delete(`http://localhost:3000/todos/${id}`).then(() => {
+                context.dispatch('getTodos'); // Atualiza a lista de tarefas após a exclusão
+            })
         }
-    },
-    modules: {}
+    }
 })
